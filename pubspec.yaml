@@ -1,7 +1,10 @@
 name: easy_dialog
 description: An easy custom dialog
-version: 1.0.0
-author: Ricardo Niño <ricardonior@gmail.com>, Javier Duarte <javierandresduarte@gmail.com>
+version: 1.0.1
+authors: 
+- Ricardo Niño <ricardonior@gmail.com>
+- Javier Duarte <javierandresduarte@gmail.com>
+
 homepage: https://github.com/RicardoNino29/easy_dialog
 
 environment:
