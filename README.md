@@ -11,7 +11,7 @@ For extended  [documentation](https://pub.dartlang.org/documentation/easy_dialog
 
 #### Star ⭐  this repo if you like our project. We would love your support.
 
-# 🔧 Installation
+# 💾 Installation
 In the `dependencies:` section of your `pubspec.yaml`, add the following line:
 
 ```yaml
@@ -19,7 +19,7 @@ dependencies:
   easy_dialog: <latest version>
 ```
 
-# 👨🏻‍💻 Usage
+# 📦 Usage
 
 ### Import this class
 
@@ -33,7 +33,7 @@ EasyDialog(
         description: Text("This is a basic dialog")).show(context);
 ```
 
-# 📲 Examples
+# 🎯 Examples
 
 Let start creating simple but beautiful dialogs. 
 <br>[Here](https://github.com/ricardonior29/easy_dialog/tree/master/example) you have some basic examples of what can you build and let your creativity fly.
@@ -117,7 +117,7 @@ All customizable [attributes](https://pub.dartlang.org/documentation/easy_dialog
     </tr>
 </table>
 
-# 🙋🏻‍♂️ How to Contribute
+# 🧱 How to Contribute
 1. Fork it
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')

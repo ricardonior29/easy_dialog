@@ -86,7 +86,7 @@ All customizable [attributes](https://pub.dartlang.org/documentation/easy_dialog
     </tr>
 </table>
 
-# 📲 Examples
+# 🎯 Examples
 
 ### Import this class
 
