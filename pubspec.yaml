@@ -1,11 +1,11 @@
 name: easy_dialog
-description: An easy custom dialog
-version: 1.0.1
+description: Easy Dialog package helps you easily create basic or custom dialogs.
+version: 1.0.2
 authors: 
 - Ricardo Niño <ricardonior@gmail.com>
 - Javier Duarte <javierandresduarte@gmail.com>
 
-homepage: https://github.com/RicardoNino29/easy_dialog
+homepage: https://github.com/ricardonior29/easy_dialog
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
