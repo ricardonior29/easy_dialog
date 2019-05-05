@@ -1,4 +1,5 @@
-<img src="https://raw.githubusercontent.com/ricardonior29/easy_dialog/master/example/assets/topImage.png" width="510" height="95" /><br>
+<img src="https://raw.githubusercontent.com/ricardonior29/easy_dialog/master/example/assets/topImage.png" height="100" alt="logo"/>
+
 [![pub package](https://img.shields.io/pub/v/easy_dialog.svg?color=orange&logo=flutter&logoColor=white)](https://pub.dartlang.org/packages/easy_dialog)&nbsp; [![GitHub stars](https://img.shields.io/github/stars/ricardonior29/easy_dialog.svg?color=blue&label=Stars&logo=GitHub)](https://github.com/ricardonior29/easy_dialog)&nbsp; [![GitHub](https://img.shields.io/github/license/ricardonior29/easy_dialog.svg?color=darkred&label=License)](https://github.com/ricardonior29/easy_dialog/blob/master/LICENSE) &nbsp; &nbsp; [![LinkedIn](https://img.shields.io/badge/LinkedIn-RN-informational.svg?logo=LinkedIn&color=0077b5)](https://www.linkedin.com/in/ricardo-ni%C3%B1o-113507183/)&nbsp; [![LinkedIn](https://img.shields.io/badge/LinkedIn-JD-informational.svg?logo=LinkedIn&color=0077b5)](https://www.linkedin.com/in/javier-duarte-269b82181/)
 <br>[![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.png?v=103)](https://opensource.org/) 
 
