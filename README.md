@@ -34,9 +34,12 @@ EasyDialog(
 
 # 📲 Examples
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/ricardonior29/easy_dialog/master/example/assets/examples_gif.gif" align = "" height = "370" alt="Network"></div>
+Let start creating simple but beautiful dialogs. 
+<br>[Here](https://github.com/ricardonior29/easy_dialog/tree/master/example) you have some basic examples of what can you build and let your creativity fly.
 
-Let start creating simple but beautiful dialogs. [Here](https://github.com/ricardonior29/easy_dialog/tree/master/example) you have some basic examples of what can you build and let your creativity fly.
+<img src="https://raw.githubusercontent.com/ricardonior29/easy_dialog/master/example/assets/examples_gif.gif" align = "" height = "500" alt="Network">
+
+
 
 # 🎨 Customization and Attributes
 
