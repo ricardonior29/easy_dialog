@@ -1,3 +1,7 @@
+1.0.3
+
+    Changes in readme files.
+
 1.0.2
 
     Clean example dir. Changes in readme files.
