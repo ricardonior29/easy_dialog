@@ -1,3 +1,12 @@
-## [0.0.1] - TODO: Add release date.
+1.0.2
 
-* TODO: Describe initial release.
+    Clean example dir. Changes in readme files.
+
+1.0.1
+
+    Minor changes-pubspec.yaml.
+
+1.0.0
+
+    Initial Release.
+
