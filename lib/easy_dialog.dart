@@ -32,8 +32,7 @@ class EasyDialog {
     this.titlePadding = const EdgeInsets.only(bottom: 12.0),
   }) : assert(fogOpacity >= 0 && fogOpacity <= 1.0);
 
-  insertByIndex(EdgeInsets padding, Widget child, int index){
-
+  insertByIndex(EdgeInsets padding, Widget child, int index) {
     contentList.insert(
         index,
         Container(
@@ -41,7 +40,6 @@ class EasyDialog {
           child: child,
           alignment: Alignment.center,
         ));
-
   }
 
   show(BuildContext context) {
@@ -134,7 +132,6 @@ class EasyDialog {
                               : Container(),
                         ],
                       ),
-
                       image == null
                           ? Container()
                           : Expanded(

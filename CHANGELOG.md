@@ -1,3 +1,7 @@
+1.0.4
+
+    Flutter format to lib/easy_dialog.dart. Added an uploader.
+
 1.0.3
 
     Changes in readme files.
