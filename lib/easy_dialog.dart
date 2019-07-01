@@ -11,6 +11,7 @@ class EasyDialog {
   final double width;
   final double fogOpacity;
   final double cornerRadius;
+  final Color cardColor;
   List<Widget> contentList;
   EdgeInsets contentPadding;
   EdgeInsets titlePadding;
@@ -26,6 +27,7 @@ class EasyDialog {
     this.width = 300,
     this.cornerRadius = 8.0,
     this.fogOpacity = 0.37,
+    this.cardColor = const Color.fromRGBO(240, 240, 240, 1.0),
     this.contentList,
     this.contentPadding,
     this.descriptionPadding = const EdgeInsets.all(0.0),
@@ -89,7 +91,7 @@ class EasyDialog {
                     ],
                     borderRadius:
                         BorderRadius.all(Radius.circular(cornerRadius)),
-                    color: Color.fromRGBO(240, 240, 240, 1.0),
+                    color: cardColor,
                   ),
                   height: height,
                   width: width,
