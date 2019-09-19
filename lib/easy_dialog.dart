@@ -16,6 +16,7 @@ class EasyDialog {
   EdgeInsets contentPadding;
   EdgeInsets titlePadding;
   EdgeInsets descriptionPadding;
+  CrossAxisAlignment contentListAlignment;
 
   EasyDialog({
     Key key,
@@ -32,6 +33,7 @@ class EasyDialog {
     this.contentPadding,
     this.descriptionPadding = const EdgeInsets.all(0.0),
     this.titlePadding = const EdgeInsets.only(bottom: 12.0),
+    this.contentListAlignment
   }) : assert(fogOpacity >= 0 && fogOpacity <= 1.0);
 
   insertByIndex(EdgeInsets padding, Widget child, int index) {
@@ -70,6 +72,9 @@ class EasyDialog {
     if (contentPadding == null) {
       contentPadding = EdgeInsets.fromLTRB(17.5, 12.0, 17.5, 13.0);
     }
+    if(contentListAlignment==null) {
+      contentListAlignment = CrossAxisAlignment.center; //defaults to center as you previously implemented
+    }
     return showDialog(
       context: context,
       barrierDismissible: true,
@@ -105,8 +110,7 @@ class EasyDialog {
                                   height: height,
                                   padding: contentPadding,
                                   child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                    crossAxisAlignment:contentListAlignment,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: contentList,
                                   ),
@@ -140,7 +144,7 @@ class EasyDialog {
                               child: Container(
                                 padding: contentPadding,
                                 child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  crossAxisAlignment: contentListAlignment,
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: contentList,
                                 ),
