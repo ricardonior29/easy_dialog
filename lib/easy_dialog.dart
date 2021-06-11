@@ -3,23 +3,24 @@ library easy_dialog;
 import 'package:flutter/material.dart';
 
 class EasyDialog {
-  final ImageProvider topImage;
-  final Text title;
-  final Text description;
+  final ImageProvider? topImage;
+  final Text? title;
+  final Text? description;
   final bool closeButton;
   final double height;
   final double width;
   final double fogOpacity;
   final double cornerRadius;
   final Color cardColor;
-  List<Widget> contentList;
-  EdgeInsets contentPadding;
-  EdgeInsets titlePadding;
+  List<Widget> _contentList = []; 
+  List<Widget>? contentList; 
+  EdgeInsets? contentPadding;
+  EdgeInsets? titlePadding;
   EdgeInsets descriptionPadding;
   CrossAxisAlignment contentListAlignment;
 
   EasyDialog({
-    Key key,
+    Key? key,
     this.topImage,
     this.title,
     this.description,
@@ -29,15 +30,15 @@ class EasyDialog {
     this.cornerRadius = 8.0,
     this.fogOpacity = 0.37,
     this.cardColor = const Color.fromRGBO(240, 240, 240, 1.0),
-    this.contentList,
+    this.contentList  ,
     this.contentPadding,
     this.descriptionPadding = const EdgeInsets.all(0.0),
     this.titlePadding = const EdgeInsets.only(bottom: 12.0),
-    this.contentListAlignment
+    this.contentListAlignment = CrossAxisAlignment.center
   }) : assert(fogOpacity >= 0 && fogOpacity <= 1.0);
 
-  insertByIndex(EdgeInsets padding, Widget child, int index) {
-    contentList.insert(
+  insertByIndex(EdgeInsets? padding, Widget? child, int index) {
+    _contentList.insert(
         index,
         Container(
           padding: padding,
@@ -47,18 +48,17 @@ class EasyDialog {
   }
 
   show(BuildContext context) {
-    ClipRRect image;
+    ClipRRect? image;
     if (topImage != null) {
       image = ClipRRect(
-        child: new Image(image: topImage),
+        child: new Image(image: topImage!),
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(cornerRadius),
             topRight: Radius.circular(cornerRadius)),
       );
     }
-    if (contentList == null) {
-      contentList = new List();
-    }
+
+
     if (title != null && description != null) {
       insertByIndex(titlePadding, title, 0);
       insertByIndex(descriptionPadding, description, 1);
@@ -72,9 +72,11 @@ class EasyDialog {
     if (contentPadding == null) {
       contentPadding = EdgeInsets.fromLTRB(17.5, 12.0, 17.5, 13.0);
     }
-    if(contentListAlignment==null) {
-      contentListAlignment = CrossAxisAlignment.center; //defaults to center as you previously implemented
+
+    if (contentList != null) {
+      _contentList = contentList as List<Widget>;
     }
+
     return showDialog(
       context: context,
       barrierDismissible: true,
@@ -112,7 +114,7 @@ class EasyDialog {
                                   child: Column(
                                     crossAxisAlignment:contentListAlignment,
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: contentList,
+                                    children: _contentList,
                                   ),
                                 )
                               : image,
@@ -146,7 +148,7 @@ class EasyDialog {
                                 child: Column(
                                   crossAxisAlignment: contentListAlignment,
                                   mainAxisAlignment: MainAxisAlignment.end,
-                                  children: contentList,
+                                  children: _contentList,
                                 ),
                               ),
                             ),
