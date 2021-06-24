@@ -1,3 +1,7 @@
+1.1.0
+
+    Null safety and example app.
+    
 1.0.5
 
     Card color variable.
