@@ -12,30 +12,30 @@ class EasyDialog {
   final double fogOpacity;
   final double cornerRadius;
   final Color cardColor;
-  List<Widget> _contentList = []; 
-  List<Widget>? contentList; 
+  List<Widget> _contentList = [];
+  List<Widget>? contentList;
   EdgeInsets? contentPadding;
   EdgeInsets? titlePadding;
   EdgeInsets descriptionPadding;
   CrossAxisAlignment contentListAlignment;
 
-  EasyDialog({
-    Key? key,
-    this.topImage,
-    this.title,
-    this.description,
-    this.closeButton = true,
-    this.height = 140,
-    this.width = 300,
-    this.cornerRadius = 8.0,
-    this.fogOpacity = 0.37,
-    this.cardColor = const Color.fromRGBO(240, 240, 240, 1.0),
-    this.contentList  ,
-    this.contentPadding,
-    this.descriptionPadding = const EdgeInsets.all(0.0),
-    this.titlePadding = const EdgeInsets.only(bottom: 12.0),
-    this.contentListAlignment = CrossAxisAlignment.center
-  }) : assert(fogOpacity >= 0 && fogOpacity <= 1.0);
+  EasyDialog(
+      {Key? key,
+      this.topImage,
+      this.title,
+      this.description,
+      this.closeButton = true,
+      this.height = 140,
+      this.width = 300,
+      this.cornerRadius = 8.0,
+      this.fogOpacity = 0.37,
+      this.cardColor = const Color.fromRGBO(240, 240, 240, 1.0),
+      this.contentList,
+      this.contentPadding = const EdgeInsets.fromLTRB(17.5, 12.0, 17.5, 13.0),
+      this.descriptionPadding = const EdgeInsets.all(0.0),
+      this.titlePadding = const EdgeInsets.only(bottom: 12.0),
+      this.contentListAlignment = CrossAxisAlignment.center})
+      : assert(fogOpacity >= 0 && fogOpacity <= 1.0);
 
   insertByIndex(EdgeInsets? padding, Widget? child, int index) {
     _contentList.insert(
@@ -58,7 +58,6 @@ class EasyDialog {
       );
     }
 
-
     if (title != null && description != null) {
       insertByIndex(titlePadding, title, 0);
       insertByIndex(descriptionPadding, description, 1);
@@ -69,13 +68,10 @@ class EasyDialog {
     if (description != null && title == null) {
       insertByIndex(descriptionPadding, description, 0);
     }
-    if (contentPadding == null) {
-      contentPadding = EdgeInsets.fromLTRB(17.5, 12.0, 17.5, 13.0);
-    }
 
-    if (contentList != null) {
-      _contentList = contentList as List<Widget>;
-    }
+    contentList?.forEach((element) {
+      insertByIndex(EdgeInsets.zero, element, _contentList.length);
+    });
 
     return showDialog(
       context: context,
@@ -112,7 +108,7 @@ class EasyDialog {
                                   height: height,
                                   padding: contentPadding,
                                   child: Column(
-                                    crossAxisAlignment:contentListAlignment,
+                                    crossAxisAlignment: contentListAlignment,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: _contentList,
                                   ),

@@ -1,3 +1,8 @@
+1.1.1
+
+    Input contentList bug fix. Now contentList combined with title and description shows all widgets.
+    Updates example app.
+    
 1.1.0
 
     Null safety and example app.
